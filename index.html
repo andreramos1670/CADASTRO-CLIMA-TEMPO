@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro + Clima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Cadastro do Cliente</h2>
+
+    <form id="formCliente">
+        <label for="nome">Nome completo:</label>
+        <input id="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input id="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input id="telefone" required>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" maxlength="9" required onblur="buscarEndereco()">
+
+        <label for="logradouro">Logradouro:</label>
+        <input type="text" id="logradouro" readonly>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" readonly>
+
+        <label for="cidadeCep">Cidade:</label>
+        <input type="text" id="cidadeCep" readonly>
+
+        <label for="uf">Estado (UF):</label>
+        <input type="text" id="uf" readonly>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
+
+<br><br>
+
+<div class="container">
+    <h2>Consulta o Clima </h2>
+ <div id="loading" style="display: none">Carregando...</div>
+ <p id="temperatura"></p>
+ <p id="descricao"></p>
+ <p id="humidade"></p>
+ <p id="horaLocal"></p>
+ <p id="UTC"></p>  </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
